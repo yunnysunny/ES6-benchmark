@@ -9,8 +9,10 @@
   "author": "DavidCai1993",
   "license": "MIT",
   "dependencies": {
+    "async": "^3.2.0",
     "benchmark": "^2.1.4",
     "bluebird": "^3.3.4",
-    "glob": "^7.0.3"
+    "glob": "^7.0.3",
+    "neo-async": "^2.6.1"
   }
 }
