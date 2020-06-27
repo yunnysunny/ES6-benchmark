@@ -1,10 +1,12 @@
-'use strict'
-suite('global.parseInt() vs Number.parseInt()', function () {
-  bench('global.parseInt()', function () {
+var Benchmark = require('benchmark');
+var suite = new Benchmark.Suite;
+var suiteDescribe = require('../lib/util');
+exports.suiteConfig = suiteDescribe('global.parseInt() vs Number.parseInt()', suite, function () {
+  suite.add('global.parseInt()', function () {
     parseInt('10', 10)
   })
 
-  bench('Number.parseInt()', function () {
+  suite.add('Number.parseInt()', function () {
     Number.parseInt('10', 10)
   })
 })

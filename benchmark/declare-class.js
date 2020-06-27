@@ -1,6 +1,8 @@
-'use strict'
-suite('declare a class', function () {
-  bench('class statement', function () {
+var Benchmark = require('benchmark');
+var suite = new Benchmark.Suite;
+var suiteDescribe = require('../lib/util');
+exports.suiteConfig = suiteDescribe('declare a class', suite, function() {
+  suite.add('class statement', function () {
     class a {
       constructor(x) {
         this.x = x
@@ -12,7 +14,7 @@ suite('declare a class', function () {
     new a(1).get()
   })
 
-  bench('use function and prototype', function () {
+  suite.add('use function and prototype', function () {
     function a (x) {
       if (!(this instanceof a)) throw new TypeError("Class constructor a cannot be invoked without 'new'")
       this.x = x

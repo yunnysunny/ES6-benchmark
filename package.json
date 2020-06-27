@@ -2,15 +2,15 @@
   "name": "es6-benchmark",
   "version": "1.0.0",
   "description": "A benchmark for some popular ES6 features in Node.js",
-  "main": "index.js",
+  "main": "benchmark/index.js",
   "scripts": {
-    "benchmark": "node benchmark"
+    "start": "node benchmark --unhandled-rejections=strict"
   },
   "author": "DavidCai1993",
   "license": "MIT",
   "dependencies": {
+    "benchmark": "^2.1.4",
     "bluebird": "^3.3.4",
-    "glob": "^7.0.3",
-    "matcha": "^0.7.0"
+    "glob": "^7.0.3"
   }
 }

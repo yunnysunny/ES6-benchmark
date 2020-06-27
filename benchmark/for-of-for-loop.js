@@ -1,13 +1,15 @@
-'use strict'
-suite('for...of vs forEach', function () {
+var Benchmark = require('benchmark');
+var suite = new Benchmark.Suite;
+var suiteDescribe = require('../lib/util');
+exports.suiteConfig = suiteDescribe('for...of vs forEach', suite, function () {
   const a = new Array(50).fill(0)
-  bench('for...of', function () {
+  suite.add('for...of', function () {
     for (let elem of a) {
       elem
     }
   })
 
-  bench('Array#forEach', function () {
+  suite.add('Array#forEach', function () {
     a.forEach(function(elem) {
       elem
     })

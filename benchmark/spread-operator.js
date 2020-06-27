@@ -1,13 +1,15 @@
-'use strict'
+var Benchmark = require('benchmark');
+var suite = new Benchmark.Suite;
 
-suite('spread operator', function () {
+var suiteDescribe = require('../lib/util');
+exports.suiteConfig = suiteDescribe('spread operator', suite, function() {
   const noop = (a, b, c) => { };
 
-  bench('noop(...[1,2,3])', function () {
+  suite.add('noop(...[1,2,3])', function () {
     noop(...[1,2,3])
   })
 
-  bench('noop.apply(null, [1,2,3])', function () {
+  suite.add('noop.apply(null, [1,2,3])', function () {
     noop.apply(null, [1,2,3])
   })
 })

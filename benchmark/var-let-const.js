@@ -1,14 +1,16 @@
-'use strict'
-suite('var let const', function () {
-  bench('var', function () {
+var Benchmark = require('benchmark');
+var suite = new Benchmark.Suite;
+var suiteDescribe = require('../lib/util');
+exports.suiteConfig = suiteDescribe('var let const', suite, function() {
+  suite.add('var', function () {
     var a = 'a'
   })
 
-  bench('let', function () {
+  suite.add('let', function () {
     let a = 'a'
   })
 
-  bench('const', function () {
+  suite.add('const', function () {
     const a = 'a'
   })
 })

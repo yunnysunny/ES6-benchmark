@@ -1,6 +1,8 @@
-'use strict'
-suite('define a function with inherited this', function () {
-  bench('function statement with self = this', function () {
+var Benchmark = require('benchmark');
+var suite = new Benchmark.Suite;
+var suiteDescribe = require('../lib/util');
+exports.suiteConfig = suiteDescribe('define a function with inherited this', suite, function() {
+  suite.add('function statement with self = this', function () {
     var self = this
     var a = function () {
       self
@@ -9,7 +11,7 @@ suite('define a function with inherited this', function () {
 
     a();
   })
-  bench('function statement with bind', function () {
+  suite.add('function statement with bind', function () {
     var a = function () {
       this
       return '1'
@@ -18,7 +20,7 @@ suite('define a function with inherited this', function () {
     a();
   })
 
-  bench('arrow function () =>', function () {
+  suite.add('arrow function () =>', function () {
     var a = () => {
       this
       return '1'

@@ -1,15 +1,17 @@
-'use strict'
-suite('template string vs use +', function () {
+var Benchmark = require('benchmark');
+var suite = new Benchmark.Suite;
+var suiteDescribe = require('../lib/util');
+exports.suiteConfig = suiteDescribe('template string vs use +', suite, function () {
   let a = 'a'
   let b = 'b'
   let c = 3
   let d = [4]
 
-  bench('template string', function () {
+  suite.add('template string', function () {
     return `a:${a} b:${b} c:${c} d:${d}`
   })
 
-  bench("use +", function () {
+  suite.add("use +", function () {
     return 'a:' + a + ' b:' + b + ' c:' + c + ' d:' + d
   })
 })

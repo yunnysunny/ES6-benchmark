@@ -3,10 +3,14 @@ const child_process = require('child_process')
 const path = require('path')
 const glob = require('glob')
 
-const cmd = path.join(__dirname, '../node_modules/.bin/matcha')
+const cmd = 'node'
+const fns = glob.sync(`${__dirname}/!(index).js`).map( (file) => {
+  return require(file).suiteConfig;
+});
+const doTask = async function () {
+  for (var i=0,len=fns.length;i<len;i++) {
+    await fns[i]();
+  }
+}
+doTask();
 
-glob.sync(`${__dirname}/!(index).js`).forEach((file) => {
-  child_process.execSync(`${cmd} ./benchmark/${path.basename(file)}`, {
-    stdio: 'inherit'
-  })
-})

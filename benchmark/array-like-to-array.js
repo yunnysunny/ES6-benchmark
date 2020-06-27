@@ -1,5 +1,7 @@
-'use strict'
-suite('array like object to array', function () {
+var Benchmark = require('benchmark');
+var suite = new Benchmark.Suite;
+var suiteDescribe = require('../lib/util');
+exports.suiteConfig = suiteDescribe('array like object to array', suite, function() {
   let a = {
     '0': 'a',
     '1': 'b',
@@ -7,11 +9,11 @@ suite('array like object to array', function () {
   }
   a.length = 3
 
-  bench('Array.from', function () {
+  suite.add('Array.from', function () {
     Array.from(a)
   })
 
-  bench('Array.prototype.slice.call', function () {
+  suite.add('Array.prototype.slice.call', function () {
     Array.prototype.slice.call(a)
   })
 })

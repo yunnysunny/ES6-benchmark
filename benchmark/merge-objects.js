@@ -1,13 +1,15 @@
-'use strict'
-suite('merge objects', function () {
-  bench('Object.assign', function () {
+var Benchmark = require('benchmark');
+var suite = new Benchmark.Suite;
+var suiteDescribe = require('../lib/util');
+exports.suiteConfig = suiteDescribe('merge objects', suite, function() {
+  suite.add('Object.assign', function () {
     var a = {a: 1}
     var b = {b: 'b'}
     var c = {c: 3}
     Object.assign(a, b, c)
   })
 
-  bench('for...in loop and assign', function () {
+  suite.add('for...in loop and assign', function () {
     var a = {a: 1}
     var b = {b: 'b'}
     var c = {c: 3}
