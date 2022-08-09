@@ -27,7 +27,7 @@ jobs:
     - run: yarn install
     - run: rm -rf public/*.log
     - run: yarn start
-    - name: Upload result of ${{ node-version }}
+    - name: Upload result of ${{ matrix.node-version }}
       uses: actions/upload-artifact@v2
       with:
         name: result-${{ node-version }}
