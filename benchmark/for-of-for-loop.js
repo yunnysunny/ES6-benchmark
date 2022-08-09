@@ -1,7 +1,7 @@
 var Benchmark = require('benchmark');
 var suite = new Benchmark.Suite;
 var suiteDescribe = require('../lib/util');
-exports.suiteConfig = suiteDescribe('for...of vs forEach', suite, function () {
+exports.suiteConfig = suiteDescribe('for...of vs forEach vs for...i', suite, function () {
   const a = new Array(50).fill(0)
   suite.add('for...of', function () {
     for (let elem of a) {
@@ -13,5 +13,11 @@ exports.suiteConfig = suiteDescribe('for...of vs forEach', suite, function () {
     a.forEach(function(elem) {
       elem
     })
+  })
+
+  suite.add('Array#for...i', function () {
+    for(let i=0,len=a.length;i<len;i++) {
+      a[i]
+    }
   })
 })
