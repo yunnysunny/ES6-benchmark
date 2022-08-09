@@ -13,6 +13,7 @@
     "benchmark": "^2.1.4",
     "bluebird": "^3.3.4",
     "glob": "^7.0.3",
-    "neo-async": "^2.6.1"
+    "neo-async": "^2.6.1",
+    "node-slogger": "^2.3.1"
   }
 }
