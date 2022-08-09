@@ -30,7 +30,7 @@ jobs:
     - name: Upload result of ${{ matrix.node-version }}
       uses: actions/upload-artifact@v2
       with:
-        name: result-${{ node-version }}
+        name: result-${{ matrix.node-version }}
         path: ./public
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
