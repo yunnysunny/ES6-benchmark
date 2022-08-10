@@ -16,7 +16,8 @@ exports.suiteConfig = suiteDescribe('for...of vs forEach vs for...i', suite, fun
   })
 
   suite.add('Array#for...i', function () {
-    for(let i=0,len=a.length;i<len;i++) {
+    const len = a.length;
+    for(let i=0;i<len;i++) {
       a[i]
     }
   })
