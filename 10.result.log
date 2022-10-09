@@ -1,87 +1,87 @@
  array like object to array
- 	Array.from x 1,740,112 ops/sec ±1.94% (86 runs sampled)
- 	Array.prototype.slice.call x 1,358,965 ops/sec ±1.10% (90 runs sampled)
+ 	Array.from x 1,759,333 ops/sec ±0.23% (97 runs sampled)
+ 	Array.prototype.slice.call x 1,310,114 ops/sec ±0.21% (97 runs sampled)
  Fastest is Array.from
 
  es6 async vs async.js
- 	es6 async x 1,895,744 ops/sec ±1.82% (81 runs sampled)
- 	async.js x 1,233,209 ops/sec ±1.89% (81 runs sampled)
- 	callback x 4,345,622 ops/sec ±2.59% (80 runs sampled)
- 	neo-async.js x 1,968,513 ops/sec ±2.09% (81 runs sampled)
+ 	es6 async x 2,021,171 ops/sec ±0.77% (85 runs sampled)
+ 	async.js x 1,200,032 ops/sec ±0.52% (87 runs sampled)
+ 	callback x 5,073,248 ops/sec ±0.53% (86 runs sampled)
+ 	neo-async.js x 2,217,048 ops/sec ±0.68% (86 runs sampled)
  Fastest is callback
 
  template string vs use +
- 	template string x 5,301,781 ops/sec ±1.50% (87 runs sampled)
- 	use + x 6,567,290 ops/sec ±0.90% (89 runs sampled)
+ 	template string x 5,362,153 ops/sec ±0.42% (97 runs sampled)
+ 	use + x 6,383,318 ops/sec ±0.15% (97 runs sampled)
  Fastest is use +
 
  declare a class
- 	class statement x 270,947 ops/sec ±1.42% (78 runs sampled)
- 	use function and prototype x 210,081 ops/sec ±1.76% (82 runs sampled)
+ 	class statement x 297,850 ops/sec ±0.80% (83 runs sampled)
+ 	use function and prototype x 214,057 ops/sec ±1.01% (87 runs sampled)
  Fastest is class statement
 
  define a function with inherited this
- 	function statement with self = this x 825,550,082 ops/sec ±0.77% (91 runs sampled)
- 	function statement with bind x 805,435,674 ops/sec ±1.48% (86 runs sampled)
- 	arrow function () => x 816,798,204 ops/sec ±1.00% (91 runs sampled)
- Fastest is function statement with self = this,arrow function () =>,function statement with bind
+ 	function statement with self = this x 716,179,023 ops/sec ±0.23% (94 runs sampled)
+ 	function statement with bind x 719,304,951 ops/sec ±0.14% (96 runs sampled)
+ 	arrow function () => x 717,776,879 ops/sec ±0.11% (93 runs sampled)
+ Fastest is function statement with bind
 
  fs.writeFile vs fs.createWriteStream vs fs.write
- 	fs.writeFile x 2,035 ops/sec ±4.49% (73 runs sampled)
- 	fs.createWriteStream x 2,145 ops/sec ±7.31% (68 runs sampled)
- 	fs.write x 2,676 ops/sec ±6.34% (68 runs sampled)
+ 	fs.writeFile x 4,646 ops/sec ±3.42% (73 runs sampled)
+ 	fs.createWriteStream x 4,934 ops/sec ±3.27% (73 runs sampled)
+ 	fs.write x 5,717 ops/sec ±4.35% (76 runs sampled)
  Fastest is fs.write
 
  for...in vs Object.keys()
- 	for...in x 103,901,322 ops/sec ±1.34% (89 runs sampled)
- 	Object.keys() x 16,165,230 ops/sec ±1.59% (87 runs sampled)
+ 	for...in x 102,218,313 ops/sec ±0.41% (92 runs sampled)
+ 	Object.keys() x 16,218,170 ops/sec ±0.21% (94 runs sampled)
  Fastest is for...in
 
  for...of vs forEach vs for...i
- 	for...of x 12,950,921 ops/sec ±1.19% (89 runs sampled)
- 	Array#forEach x 43,319,277 ops/sec ±1.49% (86 runs sampled)
- 	Array#for...i x 24,741,350 ops/sec ±0.97% (88 runs sampled)
- Fastest is Array#forEach
+ 	for...of x 6.71 ops/sec ±0.10% (21 runs sampled)
+ 	Array#forEach x 1.69 ops/sec ±1.69% (9 runs sampled)
+ 	Array#for...i x 29.88 ops/sec ±0.01% (53 runs sampled)
+ Fastest is Array#for...i
 
  rest parameter vs normal parameter
- 	call function with rest parameter x 371,812,814 ops/sec ±30.93% (46 runs sampled)
- 	call function with normal parameter x 107,584,857 ops/sec ±3.49% (83 runs sampled)
+ 	call function with rest parameter x 718,916,418 ops/sec ±0.17% (96 runs sampled)
+ 	call function with normal parameter x 716,469,919 ops/sec ±0.18% (90 runs sampled)
  Fastest is call function with rest parameter
 
  merge objects
- 	Object.assign x 15,781,738 ops/sec ±2.44% (84 runs sampled)
- 	for...in loop and assign x 29,169,477 ops/sec ±3.93% (82 runs sampled)
+ 	Object.assign x 16,588,134 ops/sec ±0.18% (93 runs sampled)
+ 	for...in loop and assign x 31,065,856 ops/sec ±0.46% (89 runs sampled)
  Fastest is for...in loop and assign
 
  global.parseInt() vs Number.parseInt() vs Number()
- 	global.parseInt() x 81,004,350 ops/sec ±1.94% (87 runs sampled)
- 	Number.parseInt() x 196,426,897 ops/sec ±5.84% (86 runs sampled)
- 	Number() x 62,540,261 ops/sec ±2.18% (88 runs sampled)
+ 	global.parseInt() x 169,693,806 ops/sec ±1.20% (90 runs sampled)
+ 	Number.parseInt() x 170,103,877 ops/sec ±1.19% (91 runs sampled)
+ 	Number() x 126,080,057 ops/sec ±7.16% (86 runs sampled)
  Fastest is Number.parseInt()
 
  promise vs bluebird
- 	promise x 10,094,098 ops/sec ±1.28% (80 runs sampled)
- 	bluebird x 3,618,368 ops/sec ±1.46% (80 runs sampled)
+ 	promise x 9,396,270 ops/sec ±0.46% (87 runs sampled)
+ 	bluebird x 3,717,542 ops/sec ±0.45% (82 runs sampled)
  Fastest is promise
 
  String#repeat() vs polyfill
- 	String#repeat x 12,695,271 ops/sec ±1.79% (83 runs sampled)
- 	use Array#join trick x 282,719 ops/sec ±1.36% (90 runs sampled)
+ 	String#repeat x 11,928,288 ops/sec ±0.44% (91 runs sampled)
+ 	use Array#join trick x 265,772 ops/sec ±1.56% (95 runs sampled)
  Fastest is String#repeat
 
  spread operator
- 	noop(...[1,2,3]) x 43,290,385 ops/sec ±3.49% (68 runs sampled)
- 	noop.apply(null, [1,2,3]) x 40,207,673 ops/sec ±2.85% (63 runs sampled)
+ 	noop(...[1,2,3]) x 55,338,030 ops/sec ±0.53% (94 runs sampled)
+ 	noop.apply(null, [1,2,3]) x 52,583,872 ops/sec ±0.37% (92 runs sampled)
  Fastest is noop(...[1,2,3])
 
  string starts with
- 	string.startsWith(value) x 23,021,585 ops/sec ±1.35% (76 runs sampled)
- 	use regexp x 24,466,580 ops/sec ±1.43% (87 runs sampled)
+ 	string.startsWith(value) x 23,536,448 ops/sec ±0.13% (97 runs sampled)
+ 	use regexp x 25,309,120 ops/sec ±2.59% (89 runs sampled)
  Fastest is use regexp
 
  var let const
- 	var x 114,780,930 ops/sec ±4.29% (32 runs sampled)
- 	let x 106,962,329 ops/sec ±4.80% (80 runs sampled)
- 	const x 114,188,630 ops/sec ±4.46% (38 runs sampled)
- Fastest is var,const
+ 	var x 717,076,991 ops/sec ±0.15% (96 runs sampled)
+ 	let x 554,715,456 ops/sec ±21.71% (79 runs sampled)
+ 	const x 95,786,195 ops/sec ±2.95% (86 runs sampled)
+ Fastest is var,let
 
