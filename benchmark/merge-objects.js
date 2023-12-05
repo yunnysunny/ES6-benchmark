@@ -27,4 +27,14 @@ exports.suiteConfig = suiteDescribe('merge objects', suite, function() {
       }
     }
   })
+  suite.add('spread operator', function() {
+    var a = {a: 1}
+    var b = {b: 'b'}
+    var c = {c: 3}
+    a = {
+      ...a,
+      ...b,
+      ...c
+    }
+  })
 })
