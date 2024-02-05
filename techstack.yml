@@ -1,0 +1,149 @@
+repo_name: yunnysunny/ES6-benchmark
+report_id: 6ee797a10ded8804d4c5a490c60fa1e3
+version: 0.1
+repo_type: Public
+timestamp: '2024-02-05T15:57:46+00:00'
+requested_by: yunnysunny
+provider: github
+branch: master
+detected_tools_count: 11
+tools:
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/yunnysunny/ES6-benchmark
+  detection_source: Repo Metadata
+- name: ".NET"
+  description: A free, cross-platform, open source developer platform for building
+    many different types of applications
+  website_url: http://www.microsoft.com/net/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/1014/IoPy1dce_400x400.png
+  detection_source_url: https://github.com/yunnysunny/ES6-benchmark/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: DavidCai
+  last_updated_on: 2016-03-20 12:13:14.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/yunnysunny/ES6-benchmark
+  detection_source: Repo Metadata
+- name: GitHub Actions
+  description: Automate your workflow from idea to production
+  website_url: https://github.com/features/actions
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Continuous Integration
+  image_url: https://img.stackshare.io/service/11563/actions.png
+  detection_source_url: https://github.com/yunnysunny/ES6-benchmark/blob/master/.github/workflows/node.js.yml
+  detection_source: ".github/workflows/node.js.yml"
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-09 10:24:35.000000000 Z
+- name: NuGet
+  description: The package manager for .NET
+  website_url: https://www.nuget.org/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/service/2637/6I3oEOP4_400x400.jpg
+  detection_source_url: https://github.com/yunnysunny/ES6-benchmark/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: DavidCai
+  last_updated_on: 2016-03-20 12:13:14.000000000 Z
+- name: Yarn
+  description: A new package manager for JavaScript
+  website_url: https://yarnpkg.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/5848/44mC-kJ3.jpg
+  detection_source_url: https://github.com/yunnysunny/ES6-benchmark/blob/master/yarn.lock
+  detection_source: yarn.lock
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-09 10:24:35.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/yunnysunny/ES6-benchmark/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: DavidCai
+  last_updated_on: 2016-03-20 12:13:14.000000000 Z
+- name: Bluebird
+  description: A full featured promise library with unmatched performance
+  website_url: https://github.com/petkaantonov/bluebird/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript Utilities & Libraries
+  image_url: https://img.stackshare.io/service/11991/bb.png
+  detection_source_url: https://github.com/yunnysunny/ES6-benchmark/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: DavidCai
+  last_updated_on: 2016-03-20 12:13:14.000000000 Z
+- name: async
+  description: Higher-order functions and common patterns for asynchronous code
+  package_url: https://www.npmjs.com/async
+  version: 3.2.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15851/default_a2f722724df977d0f7752839e5d8845ab41f69d5.png
+  detection_source_url: https://github.com/yunnysunny/ES6-benchmark/blob/master/yarn.lock
+  detection_source: package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-09 10:24:35.000000000 Z
+- name: benchmark
+  description: A benchmarking library that supports high-resolution timers &amp; returns
+    statistically significant results
+  package_url: https://www.npmjs.com/benchmark
+  version: 2.1.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16241/default_cbc604730ab04341982d806fe402cd0706cc8bf4.png
+  detection_source_url: https://github.com/yunnysunny/ES6-benchmark/blob/master/yarn.lock
+  detection_source: package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2020-06-27 10:31:17.000000000 Z
+- name: glob
+  description: A little globber
+  package_url: https://www.npmjs.com/glob
+  version: 7.2.3
+  license: ISC
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15875/default_7c39a83d4acd952df89b1ebfdb94c8646324fbf1.png
+  detection_source_url: https://github.com/yunnysunny/ES6-benchmark/blob/master/yarn.lock
+  detection_source: package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2020-06-27 11:47:50.000000000 Z
