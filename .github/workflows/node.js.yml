@@ -17,19 +17,19 @@ jobs:
       group: ${{ github.workflow }}-${{ github.job }}-${{ github.ref }}-${{ matrix.node-version }}
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x, 16.x, 18.x, 20.x]
+        node-version: [10.x, 12.x, 14.x, 16.x, 18.x, 20.x, 22.x, 24.x]
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
     - run: yarn install
     - run: rm -rf public/*.log
     - run: yarn start
     - name: Upload result of ${{ matrix.node-version }}
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: result-${{ matrix.node-version }}
         path: ./public
